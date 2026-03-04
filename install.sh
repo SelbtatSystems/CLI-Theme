@@ -7,7 +7,7 @@
 set -euo pipefail
 
 REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
-CONFIG_DEST="$HOME/.config/powershell"
+CONFIG_DEST="$HOME/.config/cli"
 FONT_DIR="$HOME/.local/share/fonts"
 
 info()  { printf '\033[1;36m[%s]\033[0m %s\n' "$1" "$2"; }
@@ -62,7 +62,7 @@ else
 
 # Oh My Posh prompt (added by cl-shell installer)
 if command -v oh-my-posh &> /dev/null; then
-    eval "$(oh-my-posh init bash --config ~/.config/powershell/.cl-shell.omp.json)"
+    eval "$(oh-my-posh init bash --config ~/.config/cli/.cl-shell.omp.json)"
 fi
 BASH_BLOCK
     ok "~/.bashrc updated."
